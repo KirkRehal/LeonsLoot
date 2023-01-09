@@ -1,0 +1,111 @@
+@import '../../../styles.scss';
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 20px;
+    padding: 10px;
+    background-color: $mainGold;
+    border: 2px solid black;
+    color: black;
+    border-radius: 10px;
+}
+
+.column {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 767px) {
+    .owner-title {
+        font-size: 36px;
+        line-height: 36px;
+        margin-bottom: 10px;
+        align-self: center;
+    }
+}
+  
+@media (min-width: 1025px) {
+    .owner-title {
+        font-size: 56px;
+        line-height: 56px;
+        margin-bottom: 20px;
+        align-self: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .owner-name {
+        font-size: 24px;
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+}
+  
+@media (min-width: 1025px) {
+    .owner-name {
+        font-size: 42px;
+        line-height: 42px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .owner-image {
+        height: 140px;
+        width: 140px;
+        border-radius: 10px;
+        margin-right: 10px;
+    }
+}
+  
+@media (min-width: 1025px) {
+    .owner-image {
+        height: 290px;
+        width: 290px;
+        border-radius: 10px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .owner-message {
+       font-size: 20px;
+       line-height: 20px;
+    }
+}
+  
+@media (min-width: 1025px) {
+    .owner-message {
+       font-size: 36px;
+       line-height: 36px;
+    }
+}
+
+@media (max-width: 767px) {
+    .owner-possesion-time {
+        margin-top: 20px;
+        font-size: 20px;
+        line-height: 20px;
+    }
+}
+  
+@media (min-width: 1025px) {
+    .owner-possesion-time {
+        margin-top: 40px;
+        font-size: 36px;
+        line-height: 36px;
+    }
+}
+
+.map-container {
+    width: 90%;
+    padding: 10px;
+}

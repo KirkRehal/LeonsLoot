@@ -1,0 +1,69 @@
+@import '../../../styles.scss';
+
+.container {
+    padding: 20px;
+}
+
+.rules-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 35px;
+}
+
+.job-type {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 10px;
+    flex: 0 1 40%;
+}
+
+.full-width-flex {
+    flex: 0 1 70%;
+}
+
+@media (max-width: 767px) {
+    .job-title {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+}
+  
+  @media (min-width: 1025px) {
+    .job-title {
+        font-size: 48px;
+        line-height: 50px;
+        margin-bottom: 10px;
+    }
+}
+
+.rule {
+    background-color: $mainGold;
+    border: 2px solid black;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: rgb(0, 0, 0, 33%) 10px 5px 10px;
+    transition: 0.3s;
+}
+
+.rule:hover {
+    box-shadow: rgb(0, 0, 0, 33%) 20px 10px 20px;
+}
+
+@media (max-width: 767px) {
+    .rule-text {
+        font-size: 15px;
+        line-height: 18px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .rule-text {
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+

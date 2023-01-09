@@ -1,0 +1,35 @@
+<div class="members-container">
+    <div class="members-list">
+        <div 
+            *ngFor="let member of members" 
+            class="member" 
+            [class.bronze]="member.stats.overall >= 0 && member.stats.overall <= 59"
+            [class.silver]="member.stats.overall >= 60 && member.stats.overall <= 79"
+            [class.gold]="member.stats.overall >= 80 && member.stats.overall <= 100"
+        >
+            <div class="member-picture">
+                <div class="image-container">
+                    <!-- <img src="assets/{{member.profileImageSrc}}" class="member-image" alt="pic"/> -->
+                    <img src="assets/images/david.JPG" class="member-image"/>
+                </div>
+            </div>
+            <div class="member-data">
+                <div class="member-name">{{member.name}} 
+                    <span matTooltip="{{member.name}} has an accusation remaining" matTooltipClass="tooltip" *ngIf="member.hasAccusation">
+                        <mat-icon class="accusation-icon" fontSet="fa" fontIcon="fa-hand-point-right"></mat-icon>
+                    </span>
+                </div>
+                <div class="member-stats">
+                    <div *ngFor="let stat of member.stats | keyvalue" class="member-stat stats">
+                        {{stat.key | titlecase}}: {{stat.value}}
+                    </div>
+                </div>
+                <div class="member-badges">
+                    <div *ngFor="let badge of member.badges" class="member-badge">
+                        <app-badge [badge]="badge"></app-badge>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

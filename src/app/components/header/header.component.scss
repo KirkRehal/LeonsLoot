@@ -1,0 +1,64 @@
+@import '../../../styles.scss';
+
+@media (max-width: 767px) {
+  .header-container {
+    font-size: 12px;
+    padding: 12px 20px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .header-container {
+    font-size: 24px;
+    padding: 24px 40px;
+  }
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #262626;
+  /* box-shadow: 0 3px 3px -1px grey; */
+}
+
+.links-container {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 0.5;
+}
+
+.heist-button {
+  background-color: red;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.link {
+  cursor: pointer;
+  align-self: center;
+}
+
+.active-link {
+  text-decoration: underline 4px solid $mainRed;
+  font-weight: 500;
+  cursor: default;
+}
+
+.active-heist-link {
+  animation: opacity 1.5s linear infinite;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

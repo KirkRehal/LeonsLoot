@@ -1,0 +1,107 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+$cross-color: #110078;
+$shield-border-color: #111;
+$background-color: #e6c002;
+$darker-background-color: #b59702;
+$size: 75px;
+$size-phone: 45px;
+$iconSize: 45px;
+$iconSize-phone: 25px;
+
+
+@media (max-width: 767px) {
+  .badge-container {
+    height: $size-phone;
+    width: $size-phone;
+    margin-right: 5px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .badge-container {
+    height: $size;
+    width: $size;
+    margin-right: 15px;
+  }
+}
+
+.shield {
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  border-radius: 50% 50% 50% 50% / 12% 12% 88% 88%;
+  background-image: linear-gradient(
+      transparent 35%,
+      transparent 45%
+    ),
+    linear-gradient(
+      90deg,
+      transparent 45%,
+      transparent 55%
+    ),
+    linear-gradient(
+      90deg,
+      $background-color 50%,
+      $darker-background-color 50%
+    );
+    // position: relative;
+}
+
+@media (max-width: 767px) {
+  .icon {
+    font-size: $iconSize-phone;
+    position: relative;
+    top: -40px;
+    left: 24%;
+    right: 0;
+    bottom: 0;
+    height: 45px;
+    width: 45px;
+    color: black;
+  }
+  
+  .fa-icon {
+    font-size: $iconSize-phone;
+    position: relative;
+    left: 23%;
+    top: -40px;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    width: 50px;
+    color: black;
+  }
+}
+
+@media (min-width: 1025px) {
+  .icon {
+    font-size: $iconSize;
+    position: relative;
+    left: 21%;
+    top: -90%;
+    right: 0;
+    bottom: 0;
+    height: 45px;
+    width: 45px;
+    color: black;
+  }
+  
+  .fa-icon {
+    font-size: $iconSize;
+    position: relative;
+    left: 17%;
+    top: -90%;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    width: 50px;
+    color: black;
+  }
+}
+
+::ng-deep .tooltip {
+  font-size: 18px;
+  line-height: 24px;
+}

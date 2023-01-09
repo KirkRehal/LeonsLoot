@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="rules-container">
+        <div class="job-type">
+            <div class="job-title">Trophy owner</div>
+            <div class="rules-list">
+                <div *ngFor="let rule of ownerRules" class="rule rule-text">{{rule}}</div>
+            </div>
+        </div>
+        <div class="job-type">
+            <div class="job-title">Trophy thieves</div>
+            <div class="rules-list">
+                <div *ngFor="let rule of thiefRules" class="rule rule-text">{{rule}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="rules-container">
+        <div class="job-type full-width-flex">
+            <div class="job-title">ACCUSATION rules</div>
+            <div class="rules-list">
+                <div *ngFor="let rule of accusationRules" class="rule rule-text">{{rule}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="rules-container">
+        <div class="job-type full-width-flex">
+            <div class="job-title">Winner rules</div>
+            <div class="rules-list">
+                <div *ngFor="let rule of winnerRules" class="rule rule-text">{{rule}}</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="header-container">
+  <div [routerLink]="['/home']" class="logo link"><img src="./../../../assets/images/hotdog.svg" width="60"/></div>
+  <div class="links-container">
+    <div [routerLink]="['/rules']" routerLinkActive="active-link" class="link">Rules</div>
+    <!-- <div *ngIf="this.isDev" [routerLink]="['/stats']" routerLinkActive="active-link" class="link">Stats</div> -->
+    <div [routerLink]="['/members']" routerLinkActive="active-link" class="link">Members</div>
+    <div [routerLink]="['/history']" routerLinkActive="active-link" class="link">History</div>
+    <div [routerLink]="['/heist']" routerLinkActive="active-heist-link" class="link"><span class="heist-button">HEIST BUTTON</span></div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="home-container">
+    <div class="column">
+        <div class="owner-title">Current Owner</div>
+        <div class="row">
+            <div>
+                <!-- <img [src]="this.owner.profileImageSrc"/> -->
+                <img class="owner-image" src="assets/images/david.JPG"/>
+
+            </div>
+            <div>
+                <div class="owner-name">{{this.owner?.name}}</div>
+                <div class="owner-message"><i>"{{this.latestHistory?.heistMessage}}"</i></div>
+                <div class="owner-possesion-time">
+                    <div>Time of possession</div> 
+                    <!-- <div>{{(posessionTime$ | async) | date: "d 'days' h 'hours' m 'minutes' s 'seconds'"}}</div></div> -->
+                    <div>{{(posessionTime$ | async)}}</div></div>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="owner-title">Current Location</div>
+        <div class="row">
+            <div class="map-container">
+                <google-map
+                    *ngIf="(trophyTracker$ | async) as trophy"
+                    [options]="mapOptions"
+                    [center]="center$ | async"
+                    width="100%"
+                >
+                    <map-marker [options]="markerOptions" [position]="center$ | async"></map-marker>
+                </google-map>
+            </div>
+        </div>
+    </div>
+</div>

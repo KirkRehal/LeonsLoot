@@ -1,0 +1,34 @@
+<div *ngIf="!agentCodeHasBeenEntered" class="enter-code-outer-container" [class.disappear]="removeCodeScreen">
+    <div class="enter-code-inner-container">
+        <div class="column outline-box outline">
+            <div class="message-text anim-typewriter">Enter your code below, agent.</div>
+            <div class="column">
+                <input (keyup.enter)="validateCode()" [(ngModel)]="this.agentCode" class="input"/>
+                <button mat-button (click)="this.validateCode()" class="row enter verify">Click to verify agent code</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="agentCodeHasBeenEntered" class="enter-code-outer-container">
+    <div *ngIf="!heistCompleted" class="enter-code-inner-container">
+        <div class="column outline-box outline">
+            <div class="message-text" style="margin-bottom: 20px;">{{agentName}}</div>
+            <div class="row message-text">By clicking the button below,</div>
+            <div class="row message-text">you verify that you have successfully heisted</div>
+            <br>
+            <br>
+            <div class="row message-text">Please enter a message below and let</div>
+            <div class="row message-text">your fellow agents know what you'd like to say</div>
+            <input (keyup.enter)="sendHeistMessage()" [(ngModel)]="this.heistMessage" class="input"/>
+            <button mat-button color="primary" (click)="this.sendHeistMessage()" class="row enter">Click to heist</button>
+        </div>
+    </div>
+    <div *ngIf="heistCompleted" class="enter-code-inner-container">
+        <div class="column outline-box outline fade-in">
+            <div class="row message-text">Congratulations on your heist, {{agentName}}</div>
+            <br>
+            <div class="row message-text">Now fuck off</div>
+        </div>
+    </div>
+</div>
