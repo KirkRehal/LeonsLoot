@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build prod": "ng build -c production --base-href=https://kirkrehal.github.io/LeonsLoot/",
+    "build-prod": "ng build -c production --base-href=https://kirkrehal.github.io/LeonsLoot/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
