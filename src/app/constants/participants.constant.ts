@@ -5,10 +5,12 @@ export const PARTICIPANT_AARON = 'Aaron';
 export const PARTICIPANT_ANTHONY = 'Anthony';
 export const PARTICIPANT_CARLOS = 'Carlos';
 export const PARTICIPANT_CHAYA = 'Chaya';
-export const PARTICIPANT_DAVID = 'David';
+export const PARTICIPANT_DAVID_LI = 'David Li';
+export const PARTICIPANT_DAVID_HWANG = 'David Hwang';
 export const PARTICIPANT_JESS = 'Jess';
 export const PARTICIPANT_KAREN = 'Karen';
 export const PARTICIPANT_KIRK = 'Kirk';
+export const PARTICIPANT_LAWRENCE = 'Lawrence';
 export const PARTICIPANT_STEPHANIE = 'Stephanie';
 export const PARTICIPANT_TINA = 'Tina';
 
@@ -17,10 +19,12 @@ export const PARTICPANT_LIST = [
     PARTICIPANT_ANTHONY,
     PARTICIPANT_CARLOS,
     PARTICIPANT_CHAYA,
-    PARTICIPANT_DAVID,
+    PARTICIPANT_DAVID_LI,
+    PARTICIPANT_DAVID_HWANG,
     PARTICIPANT_JESS,
     PARTICIPANT_KAREN,
     PARTICIPANT_KIRK,
+    PARTICIPANT_LAWRENCE,
     PARTICIPANT_STEPHANIE,
     PARTICIPANT_TINA
 ] as const;
@@ -87,7 +91,7 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
         hasAccusation: true
     },
     {
-        name: PARTICIPANT_DAVID,
+        name: PARTICIPANT_DAVID_LI,
         stats: {
             deception: 28,
             evasion: 22,
@@ -98,6 +102,20 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
         },
         profileImageSrc: 'images/david.JPG',
         badges: ["FOUNDER",'CHIHUAHUA', 'DESTROYER'],
+        hasAccusation: true
+    },
+    {
+        name: PARTICIPANT_DAVID_HWANG,
+        stats: {
+            deception: 33,
+            evasion: 20,
+            creativity: 74,
+            sneak: 22,
+            nimble: 40,
+            overall: 0
+        },
+        profileImageSrc: 'images/david.JPG',
+        badges: ['NIGHT OWL'],
         hasAccusation: true
     },
     {
@@ -140,6 +158,20 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
         },
         profileImageSrc: 'images/kirk.JPG',
         badges: ['SCHEMER'],
+        hasAccusation: true
+    },
+    {
+        name: PARTICIPANT_LAWRENCE,
+        stats: {
+            deception: 12,
+            evasion: 26,
+            creativity: 55,
+            sneak: 19,
+            nimble: 30,
+            overall: 0
+        },
+        profileImageSrc: 'images/david.JPG',
+        badges: ['INCOGNITO'],
         hasAccusation: true
     },
     {

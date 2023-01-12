@@ -221,13 +221,14 @@ export class HistoryComponent implements OnInit {
           break;
         case 'Anthony':
         case 'Carlos':
+        case 'David Hwang':
           color = '#FFA500';
           break;
         case 'Chaya':
         case 'Tina':
           color = '#D3D3D3';
           break;
-        case 'David':
+        case 'David Li':
         case 'Stephanie':
           color = '#FF0000';
           break;

@@ -79,6 +79,16 @@ export class BadgeComponent implements OnInit {
         description = 'Damaged the trophy';
         isFa = true;
         break;
+      case 'NIGHT OWL':
+        icon = 'fa-moon';
+        description = 'Maximum power when the clock strikes midnight';
+        isFa = true;
+        break;
+      case 'INCOGNITO':
+        icon = 'fa-mask';
+        description = 'Able to disguise themselves as the opposite gender. Spooky!';
+        isFa = true;
+        break;
       default:
         break;
     }
