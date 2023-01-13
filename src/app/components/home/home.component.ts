@@ -14,7 +14,7 @@ import { TrackerService } from 'src/app/services/tracker.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  private hotdogMarkerPath: string = './../../assets/images/david.JPG';
+  private hotdogMarkerPath: string = './../../assets/images/hotdog2.png';
   public latestHistory: HistoricalData;
   public owner: ParticipantModel;
   public trophyTracker$: Observable<TrophyTrackerModel>;
