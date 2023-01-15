@@ -3,9 +3,9 @@
         <div 
             *ngFor="let member of members" 
             class="member"
-            [class.heist-cooldown]="member.hasHeistCooldown"
+            [class.heist-cooldown]="member.heistCooldown"
             matTooltipClass="tooltip"
-            [matTooltip]="member.hasHeistCooldown ? 'Currently banned from heisting' : ''"
+            matTooltip="{{test(member.heistCooldown)}}"
             [class.bronze]="member.stats.overall >= 0 && member.stats.overall <= 59"
             [class.silver]="member.stats.overall >= 60 && member.stats.overall <= 79"
             [class.gold]="member.stats.overall >= 80 && member.stats.overall <= 100"

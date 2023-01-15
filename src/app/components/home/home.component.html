@@ -14,7 +14,7 @@
                     <div>Time of possession</div> 
                     <div>{{(posessionTime$ | async)}}</div>
                     <div class="event-timer">
-                        <div>{{this.owner?.name}} must host an event within the next {{this.hostEventTimeRemaining$ | async}}</div>
+                        <div>{{this.owner?.name}} must host an event within the next <span [class.red]="(this.hostEventTimeRemaining$ | async) <= 7">{{this.hostEventTimeRemaining$ | async}}</span> days</div>
                     </div>
                 </div>
             </div>
