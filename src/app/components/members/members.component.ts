@@ -35,11 +35,7 @@ export class MembersComponent implements OnInit {
     return cooldowns.length > 0 ? _.last(cooldowns) : null;
   }
 
-  public getHeistBannedUntilDate(p: ParticipantModel) {
-    return 'alskdfksjf';
-  }
-
-  public test(cooldown?: Date) {
+  public getHeistCooldownTooltip(cooldown?: Date) {
     if (!cooldown) {
       return '';
     }
