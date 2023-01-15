@@ -24,7 +24,7 @@ export class BadgeComponent implements OnInit {
     switch(this.badge) {
       case 'CHIHUAHUA':
         icon = 'fa-dog';
-        description = 'Talks a big game, but likely all bark with no bite';
+        description = 'Talks a big game, but it\'s all bark with no bite';
         isFa = true;
         break;
       case 'DECEIVER':
