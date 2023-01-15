@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build-prod": "ng build -c production --base-href=https://www.hotdogheist.com/",
+    "build-prod": "ng build -c production --base-href=https://www.hotdogheist.com/ && cp src/CNAME docs/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

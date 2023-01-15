@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
   public owner: ParticipantModel;
   public trophyTracker$: Observable<TrophyTrackerModel>;
   public posessionTime$: Observable<string>;
+  public hostEventTimeRemaining$: Observable<string>;
   public center$: Observable<google.maps.LatLngLiteral>;
 
   public mapOptions: google.maps.MapOptions = {
@@ -35,6 +36,9 @@ export class HomeComponent implements OnInit {
     clickable: false,
     icon: {url: this.hotdogMarkerPath, scaledSize: new google.maps.Size(80, 80, 'px', 'px')},
   };
+
+  private LAST_EVENT_DATE = new Date('01/01/23');
+  private NUM_DAYS_BETWEEN_EVENTS = 90;
 
   constructor(
     private historyService: HistoryService,
@@ -83,6 +87,20 @@ export class HomeComponent implements OnInit {
         return `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`
       }),
     );
+
+    this.hostEventTimeRemaining$ = interval(1000).pipe(
+      filter(() => !!this.latestHistory),
+      map(() => {
+        const now = Date.now();
+        const abc = 1000 * 60 * 60 * 24;
+        const x = new Date(this.LAST_EVENT_DATE.getTime() + (abc * this.NUM_DAYS_BETWEEN_EVENTS));
+        // const x = this.LAST_EVENT_DATE.setDate(this.LAST_EVENT_DATE.getDate() + this.NUM_DAYS_BETWEEN_EVENTS);
+        var delta = Math.abs(x.getTime() - now) / 1000;
+
+        var days = Math.floor(delta / 86400);
+        return `${days} days`
+      })
+    )
   }
 
 }

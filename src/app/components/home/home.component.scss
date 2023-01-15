@@ -57,6 +57,11 @@
     }
 }
 
+.image-container {
+    display: flex;
+    align-items: center;
+}
+
 @media (max-width: 767px) {
     .owner-image {
         height: 140px;
@@ -101,6 +106,22 @@
   
 @media (min-width: 1025px) {
     .owner-possesion-time {
+        margin-top: 40px;
+        font-size: 36px;
+        line-height: 36px;
+    }
+}
+
+@media (max-width: 767px) {
+    .event-timer {
+        margin-top: 20px;
+        font-size: 20px;
+        line-height: 20px;
+    }
+}
+  
+@media (min-width: 1025px) {
+    .event-timer {
         margin-top: 40px;
         font-size: 36px;
         line-height: 36px;

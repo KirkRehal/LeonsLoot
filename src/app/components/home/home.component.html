@@ -2,7 +2,7 @@
     <div class="column">
         <div class="owner-title">Current Owner</div>
         <div class="row">
-            <div>
+            <div class="image-container">
                 <!-- <img [src]="this.owner.profileImageSrc"/> -->
                 <img class="owner-image" src="assets/images/david.JPG"/>
 
@@ -12,8 +12,11 @@
                 <div class="owner-message"><i>"{{this.latestHistory?.heistMessage}}"</i></div>
                 <div class="owner-possesion-time">
                     <div>Time of possession</div> 
-                    <!-- <div>{{(posessionTime$ | async) | date: "d 'days' h 'hours' m 'minutes' s 'seconds'"}}</div></div> -->
-                    <div>{{(posessionTime$ | async)}}</div></div>
+                    <div>{{(posessionTime$ | async)}}</div>
+                    <div class="event-timer">
+                        <div>{{this.owner?.name}} must host an event within the next {{this.hostEventTimeRemaining$ | async}}</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
