@@ -4,13 +4,15 @@
             *ngFor="let member of members" 
             class="member"
             [class.heist-cooldown]="member.heistCooldown"
-            matTooltipClass="tooltip"
-            matTooltip="{{getHeistCooldownTooltip(member.heistCooldown)}}"
             [class.bronze]="member.stats.overall >= 0 && member.stats.overall <= 59"
             [class.silver]="member.stats.overall >= 60 && member.stats.overall <= 79"
             [class.gold]="member.stats.overall >= 80 && member.stats.overall <= 100"
         >
-            <div class="member-picture">
+            <div 
+                class="member-picture" 
+                matTooltipClass="tooltip"
+                matTooltip="{{getHeistCooldownTooltip(member.heistCooldown)}}"
+            >
                 <div class="image-container">
                     <!-- <img src="assets/{{member.profileImageSrc}}" class="member-image" alt="pic"/> -->
                     <img src="assets/images/david.JPG" class="member-image"/>
