@@ -46,7 +46,8 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
         },
         profileImageSrc: 'images/aaron.JPG',
         badges: ['OATHKEEPER'],
-        hasAccusation: true
+        hasAccusation: true,
+        heistCooldownStartDates: []
     },
     {
         name: PARTICIPANT_ANTHONY,
@@ -60,7 +61,8 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
         },
         profileImageSrc: 'images/anthony.JPG',
         badges: ['WHISPERS'],
-        hasAccusation: true
+        hasAccusation: true,
+        heistCooldownStartDates: []
     },
     {
         name: PARTICIPANT_CARLOS,
@@ -74,7 +76,8 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
         },
         profileImageSrc: 'images/carlos.JPG',
         badges: ['NARC'],
-        hasAccusation: true
+        hasAccusation: true,
+        heistCooldownStartDates: []
     },
     {
         name: PARTICIPANT_CHAYA,
@@ -88,7 +91,8 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
         },
         profileImageSrc: 'images/chaya.JPG',
         badges: ['DECEIVER'],
-        hasAccusation: true
+        hasAccusation: true,
+        heistCooldownStartDates: []
     },
     {
         name: PARTICIPANT_DAVID_LI,
@@ -102,7 +106,8 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
         },
         profileImageSrc: 'images/david.JPG',
         badges: ["FOUNDER",'CHIHUAHUA', 'DESTROYER'],
-        hasAccusation: true
+        hasAccusation: true,
+        heistCooldownStartDates: [new Date('01/06/23')]
     },
     {
         name: PARTICIPANT_DAVID_HWANG,
@@ -116,7 +121,8 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
         },
         profileImageSrc: 'images/david.JPG',
         badges: ['NIGHT OWL'],
-        hasAccusation: true
+        hasAccusation: true,
+        heistCooldownStartDates: []
     },
     {
         name: PARTICIPANT_JESS,
@@ -130,7 +136,8 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
         },
         profileImageSrc: 'images/jess.JPG',
         badges: ['GUARDIAN'],
-        hasAccusation: true
+        hasAccusation: true,
+        heistCooldownStartDates: []
     },
     {
         name: PARTICIPANT_KAREN,
@@ -144,7 +151,8 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
         },
         profileImageSrc: 'images/karen.JPG',
         badges: ['RECOLLECTOR', 'HEIST'],
-        hasAccusation: true
+        hasAccusation: true,
+        heistCooldownStartDates: []
     },
     {
         name: PARTICIPANT_KIRK,
@@ -158,7 +166,8 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
         },
         profileImageSrc: 'images/kirk.JPG',
         badges: ['SCHEMER'],
-        hasAccusation: true
+        hasAccusation: true,
+        heistCooldownStartDates: []
     },
     {
         name: PARTICIPANT_LAWRENCE,
@@ -172,7 +181,8 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
         },
         profileImageSrc: 'images/david.JPG',
         badges: ['INCOGNITO'],
-        hasAccusation: true
+        hasAccusation: true,
+        heistCooldownStartDates: []
     },
     {
         name: PARTICIPANT_STEPHANIE,
@@ -186,7 +196,8 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
         },
         profileImageSrc: 'images/stephanie.JPG',
         badges: ['PUPPETEER'],
-        hasAccusation: true
+        hasAccusation: true,
+        heistCooldownStartDates: []
     },
     {
         name: PARTICIPANT_TINA,
@@ -200,7 +211,8 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
         },
         profileImageSrc: 'images/tina.JPG',
         badges: ['GOBLET'],
-        hasAccusation: true
+        hasAccusation: true,
+        heistCooldownStartDates: []
     }
 ];
 

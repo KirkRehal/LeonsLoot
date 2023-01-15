@@ -5,3 +5,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 $mainRed: #700101;
 $mainGold: #cf8804;
+
+::ng-deep .tooltip {
+    font-size: 18px;
+    line-height: 24px;
+}

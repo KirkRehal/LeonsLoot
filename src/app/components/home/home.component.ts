@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as _ from 'lodash';
 import { filter, interval, map, Observable, of, repeatWhen, shareReplay, tap } from 'rxjs';
+import { LAST_EVENT_DATE, NUM_DAYS_BETWEEN_EVENTS } from 'src/app/constants/heist-game.constant';
 import { PARTICIPANT_STATS } from 'src/app/constants/participants.constant';
 import { HistoricalData } from 'src/app/models/historical-data.model';
 import { ParticipantModel } from 'src/app/models/participant.model';
@@ -37,8 +38,7 @@ export class HomeComponent implements OnInit {
     icon: {url: this.hotdogMarkerPath, scaledSize: new google.maps.Size(80, 80, 'px', 'px')},
   };
 
-  private LAST_EVENT_DATE = new Date('01/01/23');
-  private NUM_DAYS_BETWEEN_EVENTS = 90;
+  
 
   constructor(
     private historyService: HistoryService,
@@ -93,8 +93,7 @@ export class HomeComponent implements OnInit {
       map(() => {
         const now = Date.now();
         const abc = 1000 * 60 * 60 * 24;
-        const x = new Date(this.LAST_EVENT_DATE.getTime() + (abc * this.NUM_DAYS_BETWEEN_EVENTS));
-        // const x = this.LAST_EVENT_DATE.setDate(this.LAST_EVENT_DATE.getDate() + this.NUM_DAYS_BETWEEN_EVENTS);
+        const x = new Date(LAST_EVENT_DATE.getTime() + (abc * NUM_DAYS_BETWEEN_EVENTS));
         var delta = Math.abs(x.getTime() - now) / 1000;
 
         var days = Math.floor(delta / 86400);

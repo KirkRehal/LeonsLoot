@@ -21,6 +21,10 @@
     color: black;
 }
 
+.heist-cooldown {
+    opacity: 0.3;
+}
+
 .bronze {
     background-color: #A17448;
 }
@@ -117,9 +121,4 @@
         font-size: 24px;
         padding: 0 5px;
     }
-}
-
-::ng-deep .tooltip {
-    font-size: 18px;
-    line-height: 24px;
 }

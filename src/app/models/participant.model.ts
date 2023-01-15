@@ -7,6 +7,7 @@ export type ParticipantModel = {
     badges: BadgeType[];
     profileImageSrc: string;
     hasAccusation: boolean;
+    heistCooldownStartDates: Date[];
 }
 
 export type ParticipantStats = {
