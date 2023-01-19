@@ -1,0 +1,17 @@
+<div class="lucky-container">
+    <div class="left text-container">
+        <div class="text">
+            <span>You've been visited by the lucky david</span>
+        </div>
+    </div>
+
+    <div class="pineapple-container" *ngIf="refresh$ | async">
+        <img src="assets/images/{{images[imageIndex]}}" class="pineapple-image"/>
+    </div>
+
+    <div class="right text-container">
+        <div class="text">
+            <span>You've been given 100 years of good luck</span>
+        </div>
+    </div>
+</div>

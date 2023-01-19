@@ -24,6 +24,7 @@ import { BadgeComponent } from './components/badge/badge.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { HomeComponent } from './components/home/home.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { LuckyDavidComponent } from './components/lucky-david/lucky-david/lucky-david.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { GoogleMapsModule } from '@angular/google-maps';
     HeistComponent,
     // OAuthComponent,
     BadgeComponent,
-    HomeComponent
+    HomeComponent,
+    LuckyDavidComponent
   ],
   imports: [
     MatSliderModule,
