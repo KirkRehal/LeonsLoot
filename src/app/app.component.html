@@ -1,4 +1,10 @@
-<div class="app-container">
+<div *ngIf="luckyDavid">
+  <div class="pineapple-container">
+    <img src="./../assets/images/pineapple.jpeg" class="pineapple-image"/>
+  </div>
+</div>
+
+<div *ngIf="!luckyDavid" class="app-container">
   <app-header></app-header>
   <router-outlet></router-outlet>
 </div>
