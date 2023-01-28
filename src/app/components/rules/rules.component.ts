@@ -16,20 +16,22 @@ export class RulesComponent implements OnInit {
 
   public thiefRules: string[] = [
     'Must not get caught in the act of stealing',
-    'Any thief caught stealing is banned from subsequent steal attempts for 1 month'
+    'Any thief caught stealing is banned from subsequent steal attempts for 1 month',
+    'Any thief successfully accused against is banned from subsequent steal attempts for 1 month'
   ];
 
   public accusationRules: string[] = [
     'Each participant is allowed one ACCUSATION per calendar year',
     'Only the trophy owner may issue an ACCUSATION',
     'When issuing an ACCUSATION, the trophy owner must accuse a single person of currently being in possession of the trophy',
-    'If an ACCUSATION is successful, the trophy owner will be granted an additional ACCUSATION'
+    'If an ACCUSATION is successful, the trophy owner will be granted an additional ACCUSATION',
+    'An accusation must be made during the same event that the trophy is stolen'
   ];
 
   public winnerRules: string[] = [
     'Gets to select a vacation destination for the group at the time and place of their choosing',
-    'Maximum of ??? PTO days may be used on the trip',
-    'Maximum cost of $???/person for travel & housing accomodations'
+    'Maximum of 2 PTO days may be used on the trip',
+    'Maximum cost of $250/person for travel & housing accomodations'
   ];
 
   constructor() { }

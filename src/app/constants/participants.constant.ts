@@ -44,7 +44,7 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
             nimble: 76,
             overall: 0
         },
-        profileImageSrc: 'images/aaron.JPG',
+        profileImageSrc: 'images/aaron.JPEG',
         badges: ['OATHKEEPER'],
         hasAccusation: true,
         heistCooldownStartDates: []
@@ -74,7 +74,7 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
             nimble: 94,
             overall: 0
         },
-        profileImageSrc: 'images/carlos.JPG',
+        profileImageSrc: 'images/carlos.JPEG',
         badges: ['NARC'],
         hasAccusation: true,
         heistCooldownStartDates: []
@@ -89,7 +89,7 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
             nimble: 42,
             overall: 0
         },
-        profileImageSrc: 'images/chaya.JPG',
+        profileImageSrc: 'images/chaya.JPEG',
         badges: ['DECEIVER'],
         hasAccusation: true,
         heistCooldownStartDates: []
@@ -104,7 +104,7 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
             nimble: -15,
             overall: 0
         },
-        profileImageSrc: 'images/david.JPG',
+        profileImageSrc: 'images/davidli.JPEG',
         badges: ["FOUNDER",'CHIHUAHUA', 'DESTROYER'],
         hasAccusation: true,
         heistCooldownStartDates: [new Date('01/06/23')]
@@ -119,7 +119,7 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
             nimble: 40,
             overall: 0
         },
-        profileImageSrc: 'images/david.JPG',
+        profileImageSrc: 'images/davidhwang.JPEG',
         badges: ['NIGHT OWL'],
         hasAccusation: true,
         heistCooldownStartDates: []
@@ -134,7 +134,7 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
             nimble: 30,
             overall: 0
         },
-        profileImageSrc: 'images/jess.JPG',
+        profileImageSrc: 'images/jess.JPEG',
         badges: ['GUARDIAN'],
         hasAccusation: true,
         heistCooldownStartDates: []
@@ -149,7 +149,7 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
             nimble: 86,
             overall: 0
         },
-        profileImageSrc: 'images/karen.JPG',
+        profileImageSrc: 'images/karen.JPEG',
         badges: ['RECOLLECTOR', 'HEIST'],
         hasAccusation: true,
         heistCooldownStartDates: []
