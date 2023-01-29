@@ -65,20 +65,22 @@
 @media (max-width: 767px) {
     .owner-image {
         height: 140px;
-        width: 140px;
+        width: 100px;
         border-radius: 10px;
         margin-right: 10px;
         border: 2px solid black;
+        filter: grayscale(1);
     }
 }
   
 @media (min-width: 1025px) {
     .owner-image {
         height: 290px;
-        width: 290px;
+        width: 240px;
         border-radius: 10px;
         margin-right: 20px;
         border: 2px solid black;
+        filter: grayscale(1);
     }
 }
 

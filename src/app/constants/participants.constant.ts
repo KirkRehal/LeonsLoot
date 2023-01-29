@@ -59,7 +59,7 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
             nimble: 41,
             overall: 0
         },
-        profileImageSrc: 'images/anthony.JPG',
+        profileImageSrc: 'images/unknown.jpg',
         badges: ['WHISPERS'],
         hasAccusation: true,
         heistCooldownStartDates: []
@@ -135,7 +135,7 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
             overall: 0
         },
         profileImageSrc: 'images/jess.JPEG',
-        badges: ['GUARDIAN'],
+        badges: ['GUARDIAN', 'HEIST'],
         hasAccusation: true,
         heistCooldownStartDates: []
     },
@@ -164,7 +164,7 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
             nimble: 21,
             overall: 0
         },
-        profileImageSrc: 'images/kirk.JPG',
+        profileImageSrc: 'images/unknown.jpg',
         badges: ['SCHEMER'],
         hasAccusation: true,
         heistCooldownStartDates: []
@@ -179,7 +179,7 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
             nimble: 30,
             overall: 0
         },
-        profileImageSrc: 'images/david.JPG',
+        profileImageSrc: 'images/unknown.jpg',
         badges: ['INCOGNITO'],
         hasAccusation: true,
         heistCooldownStartDates: []
@@ -194,7 +194,7 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
             nimble: 21,
             overall: 0
         },
-        profileImageSrc: 'images/stephanie.JPG',
+        profileImageSrc: 'images/unknown.jpg',
         badges: ['PUPPETEER'],
         hasAccusation: true,
         heistCooldownStartDates: []
@@ -209,7 +209,7 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
             nimble: 35,
             overall: 0
         },
-        profileImageSrc: 'images/tina.JPG',
+        profileImageSrc: 'images/tina.jpg',
         badges: ['GOBLET'],
         hasAccusation: true,
         heistCooldownStartDates: []
