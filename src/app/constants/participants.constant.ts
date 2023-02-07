@@ -164,7 +164,7 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
             nimble: 21,
             overall: 0
         },
-        profileImageSrc: 'images/unknown.jpg',
+        profileImageSrc: 'images/kirk.jpg',
         badges: ['SCHEMER'],
         hasAccusation: true,
         heistCooldownStartDates: []
@@ -194,7 +194,7 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
             nimble: 21,
             overall: 0
         },
-        profileImageSrc: 'images/unknown.jpg',
+        profileImageSrc: 'images/stephanie.jpg',
         badges: ['PUPPETEER'],
         hasAccusation: true,
         heistCooldownStartDates: []
