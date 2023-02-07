@@ -179,7 +179,7 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
             nimble: 30,
             overall: 0
         },
-        profileImageSrc: 'images/unknown.jpg',
+        profileImageSrc: 'images/lawrence.jpg',
         badges: ['INCOGNITO', 'OATHKEEPER'],
         hasAccusation: true,
         heistCooldownStartDates: []
