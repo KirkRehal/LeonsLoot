@@ -37,15 +37,15 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
     {
         name: PARTICIPANT_AARON,
         stats: {
-            deception: 22,
+            deception: 61,
             evasion: 60,
-            creativity: 72,
-            sneak: 85,
-            nimble: 76,
+            creativity: 32,
+            sneak: 71,
+            nimble: 35,
             overall: 0
         },
         profileImageSrc: 'images/aaron.JPEG',
-        badges: ['OATHKEEPER'],
+        badges: ['DOUBLE DOWN'],
         hasAccusation: true,
         heistCooldownStartDates: []
     },
@@ -60,7 +60,7 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
             overall: 0
         },
         profileImageSrc: 'images/unknown.jpg',
-        badges: ['WHISPERS'],
+        badges: ['WHISPERS', 'GOBLET'],
         hasAccusation: true,
         heistCooldownStartDates: []
     },
@@ -127,10 +127,10 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
     {
         name: PARTICIPANT_JESS,
         stats: {
-            deception: 90,
+            deception: 94,
             evasion: 14,
             creativity: 66,
-            sneak: 28,
+            sneak: 53,
             nimble: 30,
             overall: 0
         },
@@ -180,7 +180,7 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
             overall: 0
         },
         profileImageSrc: 'images/unknown.jpg',
-        badges: ['INCOGNITO'],
+        badges: ['INCOGNITO', 'OATHKEEPER'],
         hasAccusation: true,
         heistCooldownStartDates: []
     },

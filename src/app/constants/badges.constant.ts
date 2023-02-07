@@ -1,5 +1,6 @@
 const BADGE_LIST = [
   "OATHKEEPER",
+  "DOUBLE DOWN",
   "NARC",
   "WHISPERS",
   "CHIHUAHUA",

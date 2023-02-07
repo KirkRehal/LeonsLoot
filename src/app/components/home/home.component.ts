@@ -89,9 +89,10 @@ export class HomeComponent implements OnInit {
     this.hostEventTimeRemaining$ = interval(1000).pipe(
       filter(() => !!this.latestHistory),
       map(() => {
+        const latestEventDate = this.getLatestEventDate(this.latestHistory.takenOn, LAST_EVENT_DATE);
         const now = Date.now();
         const dayInMs = 1000 * 60 * 60 * 24;
-        const newDate = new Date(LAST_EVENT_DATE.getTime() + (dayInMs * NUM_DAYS_BETWEEN_EVENTS));
+        const newDate = new Date(latestEventDate.getTime() + (dayInMs * NUM_DAYS_BETWEEN_EVENTS));
         var delta = Math.abs(newDate.getTime() - now) / 1000;
 
         var days = Math.floor(delta / 86400);
@@ -100,4 +101,11 @@ export class HomeComponent implements OnInit {
     )
   }
 
+  private getLatestEventDate(date1: Date, date2: Date): Date {
+    if (date1.getTime() > date2.getTime()) {
+      return date1;
+    }
+
+    return date2;
+  }
 }

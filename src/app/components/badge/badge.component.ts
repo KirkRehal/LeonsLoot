@@ -42,7 +42,7 @@ export class BadgeComponent implements OnInit {
         break;
       case 'OATHKEEPER':
         icon = 'volunteer_activism';
-        description = 'Born with a heart of gold, so they cannot tell a lie';
+        description = 'Born with a heart of gold, they cannot tell a lie';
         break;
       case 'PUPPETEER':
         icon = 'groups';
@@ -87,6 +87,11 @@ export class BadgeComponent implements OnInit {
       case 'INCOGNITO':
         icon = 'fa-mask';
         description = 'Able to disguise themselves as the opposite gender. Spooky!';
+        isFa = true;
+        break;
+      case 'DOUBLE DOWN':
+        icon = 'fa-dice';
+        description = 'When caught in a lie, they will double down. Always bring conclusive evidence against this individual'
         isFa = true;
         break;
       default:
