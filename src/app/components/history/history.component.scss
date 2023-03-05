@@ -1,0 +1,129 @@
+@import '../../../styles.scss';
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+$iconSize: 45px;
+$iconSize-phone: 25px;
+
+.leaderboard-container {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .entry-width {
+        width: 340px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .entry-width {
+        width: 480px;
+    }
+}
+
+@media (max-width: 767px) {
+    .leaderboard-text {
+        margin: 24px 0;
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .leaderboard-text {
+        margin: 24px 0;
+        font-size: 42px;
+    }
+}
+
+.possession-entry {
+    display: flex;
+    padding: 8px;
+    border: 2px solid black;
+    margin-bottom: 24px;
+    background-color: $mainGold;
+    border-radius: 10px;
+    color: black;
+}
+
+.entry-picture {
+    padding-right: 24px;
+}
+
+@media (max-width: 767px) {
+    .owner-image {
+        height: 140px;
+        width: 110px;
+        border-radius: 10px;
+        margin-right: 10px;
+        border: 2px solid black;
+        filter: grayscale(1);
+    }
+}
+  
+@media (min-width: 1025px) {
+    .owner-image {
+        height: 290px;
+        width: 240px;
+        border-radius: 10px;
+        margin-right: 20px;
+        border: 2px solid black;
+        filter: grayscale(1);
+    }
+}
+
+.entry-possession-time {
+    font-size: 24px;
+    align-self: center;
+}
+
+.trophy-owner {
+    align-self: center;
+}
+
+@media (max-width: 767px) {
+    .icon {
+      font-size: $iconSize-phone;
+      height: 45px;
+      width: 45px;
+      color: black;
+    }
+    
+    .fa-icon {
+      font-size: $iconSize-phone;
+      height: 50px;
+      width: 50px;
+      color: black;
+    }
+  }
+
+@media (min-width: 1025px) {
+    .icon {
+      font-size: $iconSize;
+      position: relative;
+      left: 21%;
+      top: -90%;
+      right: 0;
+      bottom: 0;
+      height: 45px;
+      width: 45px;
+      color: black;
+    }
+    
+    .fa-icon {
+      font-size: $iconSize;
+      position: relative;
+      left: 17%;
+      top: -90%;
+      right: 0;
+      bottom: 0;
+      height: 50px;
+      width: 50px;
+      color: black;
+    }
+}
+
+.possession-stat {
+    margin-bottom: 8px;
+}

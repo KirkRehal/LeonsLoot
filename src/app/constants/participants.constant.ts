@@ -97,15 +97,15 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
     {
         name: PARTICIPANT_DAVID_LI,
         stats: {
-            deception: 28,
-            evasion: 22,
-            creativity: 97,
-            sneak: 4,
-            nimble: -15,
+            deception: 66,
+            evasion: 46,
+            creativity: 98,
+            sneak: 32,
+            nimble: 4,
             overall: 0
         },
         profileImageSrc: 'images/davidli.JPEG',
-        badges: ["FOUNDER",'CHIHUAHUA', 'DESTROYER'],
+        badges: ["FOUNDER",'CHIHUAHUA', 'DESTROYER', 'HEIST'],
         hasAccusation: true,
         heistCooldownStartDates: [new Date('01/06/23')]
     },
@@ -136,7 +136,7 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
         },
         profileImageSrc: 'images/jess.JPEG',
         badges: ['GUARDIAN', 'HEIST'],
-        hasAccusation: true,
+        hasAccusation: false,
         heistCooldownStartDates: []
     },
     {
@@ -172,11 +172,11 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
     {
         name: PARTICIPANT_LAWRENCE,
         stats: {
-            deception: 12,
+            deception: 28,
             evasion: 26,
-            creativity: 55,
-            sneak: 19,
-            nimble: 30,
+            creativity: 58,
+            sneak: 44,
+            nimble: 39,
             overall: 0
         },
         profileImageSrc: 'images/lawrence.jpg',

@@ -1,11 +1,32 @@
 <div id="chart">
-    <apx-chart
-      [series]="chartOptions.series"
-      [chart]="chartOptions.chart"
-      [fill]="chartOptions.fill"
-      [legend]="chartOptions.legend"
-      [plotOptions]="chartOptions.plotOptions"
-      [xaxis]="chartOptions.xaxis"
-      [yaxis]="chartOptions.yaxis"
-    ></apx-chart>
+  <apx-chart
+    [series]="chartOptions.series"
+    [chart]="chartOptions.chart"
+    [fill]="chartOptions.fill"
+    [legend]="chartOptions.legend"
+    [plotOptions]="chartOptions.plotOptions"
+    [xaxis]="chartOptions.xaxis"
+    [yaxis]="chartOptions.yaxis"
+  ></apx-chart>
+</div>
+
+<div class="leaderboard-container">
+  <div class="leaderboard-text">Time of possession leaderboard</div>
+  <div *ngFor="let entry of possessionLeaderboardEntries; let i = index" class="possession-entry entry-width">
+    <div class="entry-picture">
+      <img class="owner-image" src="assets/{{entry.profileImageSrc}}"/>
+    </div>
+    <div class="entry-possession-time">
+      <div>#{{i + 1}}</div>
+      <br/>
+      <div class="possession-stat">{{entry.possessionTimeDays}} days</div>
+      <div class="possession-stat">{{entry.possessionTimeHours}} hours</div>
+      <div class="possession-stat">{{entry.possessionTimeMinutes}} minutes</div>
+      <div class="possession-stat">{{entry.possessionTimeSeconds}} seconds</div>
+    </div>
+
+    <div *ngIf="entry.isCurrentOwner" class="trophy-owner">
+      <mat-icon matTooltip="Current trophy owner" matTooltipClass="tooltip" class="fa-icon" fontSet="fa" fontIcon="fa-trophy"></mat-icon>
+    </div>
   </div>
+</div>
