@@ -2,7 +2,7 @@
 @import "~@fortawesome/fontawesome-free/css/all.css";
 
 $iconSize: 45px;
-$iconSize-phone: 25px;
+$iconSize-phone: 32px;
 
 .leaderboard-container {
     margin-top: 24px;
@@ -80,46 +80,23 @@ $iconSize-phone: 25px;
 
 .trophy-owner {
     align-self: center;
+    text-align: center;
 }
 
-@media (max-width: 767px) {
-    .icon {
-      font-size: $iconSize-phone;
-      height: 45px;
-      width: 45px;
-      color: black;
-    }
-    
+@media (max-width: 767px) {    
     .fa-icon {
       font-size: $iconSize-phone;
-      height: 50px;
-      width: 50px;
+      height: 100%;
+      width: 100%;
       color: black;
     }
   }
 
 @media (min-width: 1025px) {
-    .icon {
-      font-size: $iconSize;
-      position: relative;
-      left: 21%;
-      top: -90%;
-      right: 0;
-      bottom: 0;
-      height: 45px;
-      width: 45px;
-      color: black;
-    }
-    
     .fa-icon {
       font-size: $iconSize;
-      position: relative;
-      left: 17%;
-      top: -90%;
-      right: 0;
-      bottom: 0;
-      height: 50px;
-      width: 50px;
+      height: 100%;
+      width: 100%;
       color: black;
     }
 }

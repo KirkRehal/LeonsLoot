@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { interval, tap } from 'rxjs';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { interval, Subject, takeUntil, tap } from 'rxjs';
 import { HistoryService } from '../../services/history.service';
 import {
   ChartComponent,
@@ -21,7 +21,7 @@ import { PossessionLeaderboardEntry } from 'src/app/models/possession-entry.mode
   templateUrl: './history.component.html',
   styleUrls: ['./history.component.scss']
 })
-export class HistoryComponent implements OnInit {
+export class HistoryComponent implements OnInit, OnDestroy {
   @ViewChild("chart") chart: ChartComponent
   public chartOptions: Partial<ChartOptions> = {};
   public possessionLeaderboardEntries: PossessionLeaderboardEntry[] = [];
@@ -82,6 +82,7 @@ export class HistoryComponent implements OnInit {
     }
   };
   private participantColorMap = {} as any;
+  private unsubscribe$: Subject<void> = new Subject<void>();
 
   constructor(private historyService: HistoryService) { }
 
@@ -91,16 +92,21 @@ export class HistoryComponent implements OnInit {
     this.historyService.getSheet().pipe(
       tap(data => {
         this.historicalData = data;
-        this.createPossessionLeaderboardEntries();
         this.setChartData();
       })
     ).subscribe();
 
     interval(1000).pipe(
+      takeUntil(this.unsubscribe$),
       tap(() => {
-        // this.createPossessionLeaderboardEntries();
+        this.createPossessionLeaderboardEntries();
       })
     ).subscribe();
+  }
+
+  ngOnDestroy(): void {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 
   private createPossessionLeaderboardEntries(): void {
