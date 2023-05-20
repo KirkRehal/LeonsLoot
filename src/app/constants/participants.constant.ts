@@ -11,7 +11,7 @@ export const PARTICIPANT_JESS = 'Jess';
 export const PARTICIPANT_KAREN = 'Karen';
 export const PARTICIPANT_KIRK = 'Kirk';
 export const PARTICIPANT_LAWRENCE = 'Lawrence';
-export const PARTICIPANT_STEPHANIE = 'Stephanie';
+// export const PARTICIPANT_STEPHANIE = 'Stephanie';
 export const PARTICIPANT_TINA = 'Tina';
 
 export const PARTICPANT_LIST = [
@@ -25,7 +25,7 @@ export const PARTICPANT_LIST = [
     PARTICIPANT_KAREN,
     PARTICIPANT_KIRK,
     PARTICIPANT_LAWRENCE,
-    PARTICIPANT_STEPHANIE,
+    // PARTICIPANT_STEPHANIE,
     PARTICIPANT_TINA
 ] as const;
 
@@ -157,15 +157,15 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
     {
         name: PARTICIPANT_KIRK,
         stats: {
-            deception: 82,
-            evasion: 43,
+            deception: 88,
+            evasion: 54,
             creativity: 85,
-            sneak: 14,
+            sneak: 26,
             nimble: 21,
             overall: 0
         },
         profileImageSrc: 'images/kirk.jpg',
-        badges: ['SCHEMER'],
+        badges: ['SCHEMER', 'HEIST'],
         hasAccusation: true,
         heistCooldownStartDates: []
     },
@@ -184,21 +184,21 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
         hasAccusation: true,
         heistCooldownStartDates: []
     },
-    {
-        name: PARTICIPANT_STEPHANIE,
-        stats: {
-            deception: 91,
-            evasion: 66,
-            creativity: 88,
-            sneak: 56,
-            nimble: 21,
-            overall: 0
-        },
-        profileImageSrc: 'images/stephanie.jpg',
-        badges: ['PUPPETEER'],
-        hasAccusation: true,
-        heistCooldownStartDates: []
-    },
+    // {
+    //     name: PARTICIPANT_STEPHANIE,
+    //     stats: {
+    //         deception: 91,
+    //         evasion: 66,
+    //         creativity: 88,
+    //         sneak: 56,
+    //         nimble: 21,
+    //         overall: 0
+    //     },
+    //     profileImageSrc: 'images/stephanie.jpg',
+    //     badges: ['PUPPETEER'],
+    //     hasAccusation: true,
+    //     heistCooldownStartDates: []
+    // },
     {
         name: PARTICIPANT_TINA,
         stats: {
