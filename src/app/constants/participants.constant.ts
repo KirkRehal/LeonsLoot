@@ -11,7 +11,6 @@ export const PARTICIPANT_JESS = 'Jess';
 export const PARTICIPANT_KAREN = 'Karen';
 export const PARTICIPANT_KIRK = 'Kirk';
 export const PARTICIPANT_LAWRENCE = 'Lawrence';
-// export const PARTICIPANT_STEPHANIE = 'Stephanie';
 export const PARTICIPANT_TINA = 'Tina';
 
 export const PARTICPANT_LIST = [
@@ -25,7 +24,6 @@ export const PARTICPANT_LIST = [
     PARTICIPANT_KAREN,
     PARTICIPANT_KIRK,
     PARTICIPANT_LAWRENCE,
-    // PARTICIPANT_STEPHANIE,
     PARTICIPANT_TINA
 ] as const;
 
@@ -184,21 +182,6 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
         hasAccusation: true,
         heistCooldownStartDates: []
     },
-    // {
-    //     name: PARTICIPANT_STEPHANIE,
-    //     stats: {
-    //         deception: 91,
-    //         evasion: 66,
-    //         creativity: 88,
-    //         sneak: 56,
-    //         nimble: 21,
-    //         overall: 0
-    //     },
-    //     profileImageSrc: 'images/stephanie.jpg',
-    //     badges: ['PUPPETEER'],
-    //     hasAccusation: true,
-    //     heistCooldownStartDates: []
-    // },
     {
         name: PARTICIPANT_TINA,
         stats: {

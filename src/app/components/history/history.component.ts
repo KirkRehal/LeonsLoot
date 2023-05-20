@@ -201,9 +201,8 @@ export class HistoryComponent implements OnInit, OnDestroy {
           color = '#D3D3D3';
           break;
         case 'David Li':
-        // case 'Stephanie':
-        //   color = '#FF0000';
-        //   break;
+          color = '#FF0000';
+          break;
         case 'Kirk':
         case 'Karen':
           color = '#0000FF';

@@ -12,7 +12,6 @@ export const HEIST_CODES_NAME_KEY_HASHMAP = {
     [PARTICIPANT_KAREN]: 'staffWorry',
     [PARTICIPANT_KIRK]: 'braveRally',
     [PARTICIPANT_LAWRENCE]: 'gropeScope',
-    // [PARTICIPANT_STEPHANIE]: 'bowelFlush',
     [PARTICIPANT_TINA]: 'awfulRough'
 };
 
