@@ -148,7 +148,7 @@ export class HistoryComponent implements OnInit, OnDestroy {
         possessionTimeSeconds: seconds,
         possessionTimeNumber: posessionTimeDict[key],
         profileImageSrc: _.find(PARTICIPANT_STATS, p => p.name === key).profileImageSrc,
-        isCurrentOwner: _.findIndex(this.historicalData, d => d.owner === key) === this.historicalData.length - 1
+        isCurrentOwner: this.historicalData[this.historicalData.length -1]?.owner === key
       };
 
       return leaderboardEntry;

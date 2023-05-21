@@ -65,7 +65,7 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
     {
         name: PARTICIPANT_CARLOS,
         stats: {
-            deception: 44,
+            deception: 59,
             evasion: 86,
             creativity: 79,
             sneak: 57,
@@ -98,8 +98,8 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
             deception: 66,
             evasion: 46,
             creativity: 98,
-            sneak: 32,
-            nimble: 4,
+            sneak: 42,
+            nimble: 14,
             overall: 0
         },
         profileImageSrc: 'images/davidli.JPEG',
@@ -158,7 +158,7 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
             deception: 88,
             evasion: 54,
             creativity: 85,
-            sneak: 26,
+            sneak: 44,
             nimble: 21,
             overall: 0
         },
