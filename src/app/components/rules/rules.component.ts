@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HEIST_COOLDOWN_IN_DAYS, NUM_DAYS_BETWEEN_EVENTS } from 'src/app/constants/heist-game.constant';
 
 @Component({
   selector: 'app-rules',
@@ -9,15 +10,16 @@ export class RulesComponent implements OnInit {
   public ownerRules: string[] = [
     'Trophy must be kept in a visible location in the owner\'s kitchen/living room',
     'Location tracker must stay attached to the trophy at all times',
-    'Must host an event within 90 days (timer resets after every event and when the trophy is heisted)',
+    `Must host an event within ${NUM_DAYS_BETWEEN_EVENTS} days (timer resets after every event and when the trophy is heisted)`,
+    `If an event is not hosted within ${NUM_DAYS_BETWEEN_EVENTS}, the trophy will be forfeited and all points accrued from the latest heist will be lost`,
     'If a thief completes a successful heist, the owner may issue an ACCUSATION',
     'If an ACCUSATION is successful, the trophy must be returned to the owner. Subsequent heists are prohibited by all participants for 24 hours'
   ];
 
   public thiefRules: string[] = [
     'Must not get caught in the act of stealing',
-    'Any thief caught stealing is banned from subsequent steal attempts for 1 month',
-    'Any thief successfully accused against is banned from subsequent steal attempts for 1 month'
+    `Any thief caught stealing is banned from subsequent steal attempts for ${HEIST_COOLDOWN_IN_DAYS} days`,
+    `Any thief successfully accused against is banned from subsequent steal attempts for ${HEIST_COOLDOWN_IN_DAYS} days`
   ];
 
   public accusationRules: string[] = [
