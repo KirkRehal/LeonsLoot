@@ -126,9 +126,9 @@ const PARTICIPANT_STATS_NO_OVERALL: ParticipantModel[] = [
         name: PARTICIPANT_JESS,
         stats: {
             deception: 94,
-            evasion: 14,
+            evasion: 34,
             creativity: 66,
-            sneak: 53,
+            sneak: 59,
             nimble: 30,
             overall: 0
         },
