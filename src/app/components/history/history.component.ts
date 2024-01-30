@@ -25,7 +25,8 @@ export class HistoryComponent implements OnInit, OnDestroy {
   @ViewChild("chart") chart: ChartComponent
   public chartOptions: Partial<ChartOptions> = {};
   public possessionLeaderboardEntries: PossessionLeaderboardEntry[] = [];
-
+  public selectedYear: number = new Date().getFullYear();
+  public yearOptions = [2023, 2024];
   private historicalData: HistoricalData[] = [];
   private chartDataWithoutSeries: Partial<ChartOptions> = {
     chart: {
@@ -89,12 +90,7 @@ export class HistoryComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.setParticipantColorMap();
 
-    this.historyService.getSheet().pipe(
-      tap(data => {
-        this.historicalData = data;
-        this.setChartData();
-      })
-    ).subscribe();
+    this.getAndSetChartData();
 
     interval(1000).pipe(
       takeUntil(this.unsubscribe$),
@@ -109,12 +105,33 @@ export class HistoryComponent implements OnInit, OnDestroy {
     this.unsubscribe$.complete();
   }
 
+  public onYearDropdownChange(): void {
+    this.getAndSetChartData();
+  }
+
+  private getAndSetChartData(): void {
+    this.historyService.getSheet().pipe(
+      tap(data => {
+        this.historicalData = _.filter(data, d => {
+          const year = d.takenOn.getFullYear();
+          return year === +this.selectedYear;
+        });
+        this.setChartData();
+      })
+    ).subscribe();
+  }
+
   private createPossessionLeaderboardEntries(): void {
     const posessionTimeDict: { [name: string]: number } = {};
+    const currentYear = new Date().getFullYear();
 
     _.each(this.historicalData, (data, i) => {
       const startPossessionTime = data.takenOn.getTime();
-      const endPossessionTime = this.historicalData[i+1]?.takenOn?.getTime() ?? Date.now();
+      const endPossessionDate = +this.selectedYear === currentYear ? 
+        this.historicalData[i+1]?.takenOn ?? new Date() :
+        this.historicalData[i+1]?.takenOn ?? new Date(this.selectedYear, 11, 31, 23, 59, 59);
+
+      const endPossessionTime = endPossessionDate.getTime();
 
       const elapsedPossessionTime = endPossessionTime - startPossessionTime;
       if (posessionTimeDict[data.owner]) {
@@ -148,7 +165,8 @@ export class HistoryComponent implements OnInit, OnDestroy {
         possessionTimeSeconds: seconds,
         possessionTimeNumber: posessionTimeDict[key],
         profileImageSrc: _.find(PARTICIPANT_STATS, p => p.name === key).profileImageSrc,
-        isCurrentOwner: this.historicalData[this.historicalData.length -1]?.owner === key
+        isCurrentOwner: this.historicalData[this.historicalData.length -1]?.owner === key && 
+          (this.historicalData[this.historicalData.length -1].takenOn.getFullYear() === +this.selectedYear)
       };
 
       return leaderboardEntry;

@@ -1,3 +1,10 @@
+<div class="year-container">
+  <label for="dropdown">Select a year:</label>
+  <select id="dropdown" [(ngModel)]="selectedYear" (change)="onYearDropdownChange()">
+    <option *ngFor="let option of yearOptions" [value]="option">{{ option }}</option>
+  </select>
+</div>
+
 <div id="chart">
   <apx-chart
     [series]="chartOptions.series"
