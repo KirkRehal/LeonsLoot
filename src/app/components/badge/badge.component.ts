@@ -74,6 +74,11 @@ export class BadgeComponent implements OnInit {
         description = 'Successfully stolen the hotdog trophy';
         isFa = true;
         break;
+      case '2023 Winner':
+        icon = 'fa-trophy';
+        description = 'Winner of the 2023 hotdog heist';
+        isFa = true;
+        break;
       case 'DESTROYER':
         icon = 'fa-bandage';
         description = 'Damaged the trophy';

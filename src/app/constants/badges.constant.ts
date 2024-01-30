@@ -14,7 +14,8 @@ const BADGE_LIST = [
   "HEIST",
   "DESTROYER",
   "NIGHT OWL",
-  "INCOGNITO"
+  "INCOGNITO",
+  "2023 Winner"
 ] as const;
 
 type InternalBadgeType<T extends ReadonlyArray<unknown>> = T extends ReadonlyArray<infer BadgeType> ? BadgeType : never;
